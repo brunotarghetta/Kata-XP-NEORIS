@@ -31,10 +31,35 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             //Arrange
             
             //Act
-            var result = this.Target.Add();
+            var result = this.Target.Add("");
 
             //Assert
             Assert.Equal(result, 0);
+        }
+
+        [Fact]
+        public void debe_devolver_mismo_numero_que_ingrese()
+        {
+            //Arrange
+            var parameter = "1";
+            //Act
+            var result = this.Target.Add(parameter);
+
+            //Assert
+            Assert.Equal(result, 1);
+        }
+
+
+        [Fact]
+        public void debe_devolver_suma_dos_valores_separados_por_coma()
+        {
+            //Arrange
+            var parameter = "1,2";
+            //Act
+            var result = this.Target.Add(parameter);
+
+            //Assert
+            Assert.Equal(result, 3);
         }
     }
 }

@@ -61,5 +61,17 @@ namespace TDD.Kata.StringCalculator.Tests.Unit
             //Assert
             Assert.Equal(result, 3);
         }
+
+        [Fact]
+        public void debe_devolver_suma_n_valores_separados_por_coma()
+        {
+            //Arrange
+            var parameter = "1,2,3";
+            //Act
+            var result = this.Target.Add(parameter);
+
+            //Assert
+            Assert.Equal(result, 6);
+        }
     }
 }

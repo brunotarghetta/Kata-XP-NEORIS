@@ -20,8 +20,12 @@ namespace TDD.Kata.StringCalculator
             if (numbers.Count() == 1)
                 result = Convert.ToInt32(numbers[0]);
             else
-                result = Convert.ToInt32(numbers[0]) + Convert.ToInt32(numbers[1]);
-
+            {
+                for (int i = 0; i < numbers.Count(); i++)
+                {
+                    result += Convert.ToInt32(numbers[i]);
+                }             
+            }
 
             return Convert.ToInt32(result);
         }
